@@ -4,9 +4,43 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Test.View.Schedule.Calendar"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+             mc:Ignorable="d" Height="580.51" Width="1058.933">
+    <Grid Margin="0,0,0.2,-0.2">
+        <Grid Margin="74,0,422,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition  />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Column="0"></TextBlock>
+            <TextBlock Grid.Column="1"></TextBlock>
+            <TextBlock Grid.Column="2"></TextBlock>
+            <TextBlock Grid.Column="3"></TextBlock>
+            <TextBlock Grid.Column="4"></TextBlock>
+            <TextBlock Grid.Column="5"></TextBlock>
+            <TextBlock Grid.Column="6"></TextBlock>
+
+            <StackPanel Grid.Column="0" Grid.Row="1"></StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="1"></StackPanel>
+            <StackPanel Grid.Column="2" Grid.Row="1"></StackPanel>
+            <StackPanel Grid.Column="3" Grid.Row="1"></StackPanel>
+            <StackPanel Grid.Column="4" Grid.Row="1"></StackPanel>
+            <StackPanel Grid.Column="5" Grid.Row="1"></StackPanel>
+            <StackPanel Grid.Column="6" Grid.Row="1"></StackPanel>
+
+        </Grid>
+        <DataGrid Margin="756,0,0,0">
             
+        </DataGrid>
     </Grid>
+    
 </UserControl>
