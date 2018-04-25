@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
-
+using Test.View.Schedule.Calendar;
 using Test.View.Schedule.Planning;
 
 namespace Test
@@ -22,9 +22,10 @@ namespace Test
             //A ajouter pour chaque nouvelle view
 
             PageViewModels.Add(new PlanningViewModel());
+            PageViewModels.Add(new CalendarViewModel());
 
 
-            CurrentPageViewModel = PageViewModels[0];
+            CurrentPageViewModel = PageViewModels[1];
 
         }
 
@@ -94,6 +95,13 @@ namespace Test
             get
             {
                 return PageViewModels[0];
+            }
+        }
+        public IPageViewModel Calendar
+        {
+            get
+            {
+                return PageViewModels[1];
             }
         }
 

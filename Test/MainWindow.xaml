@@ -7,18 +7,22 @@
 
         mc:Ignorable="d"
                 xmlns:MainPlanning="clr-namespace:Test.View.Schedule.Planning"
+                xmlns:Calendar="clr-namespace:Test.View.Schedule.Calendar"
         Title="MainWindow" Height="872" Width="1308">
     <Window.Resources>
 
         <DataTemplate DataType="{x:Type MainPlanning:PlanningViewModel}">
             <MainPlanning:PlanningView></MainPlanning:PlanningView>
-
+        </DataTemplate>        
+        
+        <DataTemplate DataType="{x:Type Calendar:CalendarViewModel}">
+            <Calendar:CalendarView></Calendar:CalendarView>
         </DataTemplate>
 
     </Window.Resources>
     <Grid>
 
-        <Grid HorizontalAlignment="Left" Height="900"  VerticalAlignment="Top" Width="1290" Background="#FF282A2C" Margin="0,0,0,-59">
+        <Grid HorizontalAlignment="Left" Height="842"  VerticalAlignment="Top" Width="1302" Background="#FF282A2C" Margin="0,0,-0.4,0">
             <ContentControl Content="{Binding CurrentPageViewModel}" Margin="10,10,0,54" >
             </ContentControl>
 
