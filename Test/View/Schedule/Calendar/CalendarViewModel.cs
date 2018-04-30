@@ -7,25 +7,33 @@ using System.Windows.Input;
 
 namespace Test.View.Schedule.Calendar
 {
-    class CalendarViewModel : ObservableObject, IPageViewModel
+    public class CalendarViewModel : ObservableObject, IPageViewModel
     {
         private string name;
         public string Name { get => name; set => name = value; }
 
-        //public DateTime monday;
 
         public CalendarViewModel()
         {
 
+            //if (Date1 = DateTime.Now)
+            //{
+            //    Date1 = "Today";
+            //}else
+            //{
+
+            //}
+
+            MondayOfTheWeek();
         }
 
-        DateTime date1 = DateTime.Today;
-        DateTime date2 = DateTime.Today.AddDays(1);
-        DateTime date3 = DateTime.Today.AddDays(2);
-        DateTime date4 = DateTime.Today.AddDays(3);
-        DateTime date5 = DateTime.Today.AddDays(4);
-        DateTime date6 = DateTime.Today.AddDays(5);
-        DateTime date7 = DateTime.Today.AddDays(6);
+        DateTime date1;
+        DateTime date2;
+        DateTime date3;
+        DateTime date4;
+        DateTime date5;
+        DateTime date6;
+        DateTime date7;
 
         public DateTime Date1 { get => date1; set { date1 = value; OnPropertyChanged("Date1"); } }
         public DateTime Date2 { get => date2; set { date2 = value; OnPropertyChanged("Date2"); } }
@@ -40,6 +48,14 @@ namespace Test.View.Schedule.Calendar
             DateTime currdate = DateTime.Today;
             int delta = DayOfWeek.Monday - currdate.DayOfWeek;
             DateTime monday = currdate.AddDays(delta);
+
+            Date1 = monday;
+            Date2 = monday.AddDays(1);
+            Date3 = monday.AddDays(2);
+            Date4 = monday.AddDays(3);
+            Date5 = monday.AddDays(4);
+            Date6 = monday.AddDays(5);
+            Date7 = monday.AddDays(6);
 
             return monday;
         }
