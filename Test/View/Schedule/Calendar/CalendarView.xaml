@@ -29,7 +29,7 @@
             <TextBlock Grid.Column="5" Text="{Binding DateStr6}" Background="#FF999581"></TextBlock>
             <TextBlock Grid.Column="6" Text="{Binding DateStr7}" Background="#FF999581"></TextBlock>
 
-            <StackPanel Grid.Column="0" Grid.Row="1"></StackPanel>
+            <StackPanel Name="St1" Grid.Column="0" Grid.Row="1"></StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="1"></StackPanel>
             <StackPanel Grid.Column="2" Grid.Row="1"></StackPanel>
             <StackPanel Grid.Column="3" Grid.Row="1"></StackPanel>

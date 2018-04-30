@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace Test.View.Schedule.Calendar
@@ -16,6 +18,32 @@ namespace Test.View.Schedule.Calendar
         public CalendarViewModel()
         {
             MondayOfTheWeek();
+        }
+
+        public void Today()
+        {
+            if (Date1 == DateTime.Today)
+            {
+                DateStr1 = "Today";
+            }else if(Date2 == DateTime.Today)
+            {
+                DateStr2 = "Today";
+            }else if(Date3 == DateTime.Today)
+            {
+                DateStr3 = "Today";
+            }else if(Date4 == DateTime.Today)
+            {
+                DateStr4 = "Today";
+            }else if(Date5 == DateTime.Today)
+            {
+                DateStr5 = "Today";
+            }else if(Date6 == DateTime.Today)
+            {
+                DateStr6 = "Today";
+            }else if(Date7 == DateTime.Today)
+            {
+                DateStr7 = "Today";
+            }
         }
 
         DateTime date1;
@@ -48,7 +76,7 @@ namespace Test.View.Schedule.Calendar
         public string DateStr6 { get => datestr6; set { datestr6 = value; OnPropertyChanged("DateStr6"); } }
         public string DateStr7 { get => datestr7; set { datestr7 = value; OnPropertyChanged("DateStr7"); } }
 
-        public DateTime MondayOfTheWeek()
+        public void MondayOfTheWeek()
         {
             DateTime currdate = DateTime.Today;
             int delta = DayOfWeek.Monday - currdate.DayOfWeek;
@@ -70,10 +98,8 @@ namespace Test.View.Schedule.Calendar
             DateStr6 = Date6.ToString("dd/MM");
             DateStr7 = Date7.ToString("dd/MM");
 
-
-            return monday;
+            Today();
         }
-
 
         public void AddWeek()
         {
@@ -92,6 +118,8 @@ namespace Test.View.Schedule.Calendar
             DateStr5 = Date5.ToString("dd/MM");
             DateStr6 = Date6.ToString("dd/MM");
             DateStr7 = Date7.ToString("dd/MM");
+
+            Today();
         }
 
         public void RemoveWeek()
@@ -111,8 +139,9 @@ namespace Test.View.Schedule.Calendar
             DateStr5 = Date5.ToString("dd/MM");
             DateStr6 = Date6.ToString("dd/MM");
             DateStr7 = Date7.ToString("dd/MM");
-        }
 
+            Today();
+        }
 
         public ICommand _NextWeek;
         public ICommand NextWeek
@@ -124,10 +153,8 @@ namespace Test.View.Schedule.Calendar
                     _NextWeek = new RelayCommand(
                         p => AddWeek());
                 }
-
                 return _NextWeek;
             }
-
         }
 
         public ICommand _PreviousWeek;
@@ -140,12 +167,32 @@ namespace Test.View.Schedule.Calendar
                     _PreviousWeek = new RelayCommand(
                         p => RemoveWeek());
                 }
-
                 return _PreviousWeek;
             }
-
         }
 
-        
+        //public void AddTechnicianButton()
+        //{
+        //    StackPanel stack = new StackPanel();
+        //    ContentControl = stack;
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        Button btn = new Button();
+        //        btn.Name = i.ToString();
+        //        btn.FontSize += 10;
+        //        btn.Content = "Button " + btn.Name + " says 'Click me'";
+        //        btn.Click += ButtonOnClick;
+        //        stack.Children.Add(btn);
+        //    }
+
+        //}
+        //void ButtonOnClick(object sender, RoutedEventArgs args)
+        //{
+        //    Button btn = args.Source as Button;
+
+        //    MessageBox.Show("Button " + btn.Name + " has been clicked",
+        //                    "Button Click");
+        //}
+
     }
 }
