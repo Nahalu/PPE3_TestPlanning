@@ -27,7 +27,7 @@ namespace Test.View.Schedule.Planning
             {
                 DateTime start = DateTime.Now.AddYears(-2);
                 DateTime end = DateTime.Now.AddYears(2);
-                listeIntervention=api.GetPlanning(start, end);
+                //listeIntervention=api.GetPlanning(start, end);
             }
 
 
