@@ -21,13 +21,13 @@
                 <RowDefinition  />
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Column="0" Text="{Binding Date1}"></TextBlock>
-            <TextBlock Grid.Column="1" Text="{Binding Date2}"></TextBlock>
-            <TextBlock Grid.Column="2" Text="{Binding Date3}"></TextBlock>
-            <TextBlock Grid.Column="3" Text="{Binding Date4}"></TextBlock>
-            <TextBlock Grid.Column="4" Text="{Binding Date5}"></TextBlock>
-            <TextBlock Grid.Column="5" Text="{Binding Date6}"></TextBlock>
-            <TextBlock Grid.Column="6" Text="{Binding Date7}"></TextBlock>
+            <TextBlock Grid.Column="0" Text="{Binding DateStr1}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="1" Text="{Binding DateStr2}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="2" Text="{Binding DateStr3}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="3" Text="{Binding DateStr4}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="4" Text="{Binding DateStr5}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="5" Text="{Binding DateStr6}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="6" Text="{Binding DateStr7}" Background="#FF999581"></TextBlock>
 
             <StackPanel Grid.Column="0" Grid.Row="1"></StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="1"></StackPanel>

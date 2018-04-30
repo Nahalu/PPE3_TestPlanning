@@ -12,18 +12,9 @@ namespace Test.View.Schedule.Calendar
         private string name;
         public string Name { get => name; set => name = value; }
 
-
+        
         public CalendarViewModel()
         {
-
-            //if (Date1 = DateTime.Now)
-            //{
-            //    Date1 = "Today";
-            //}else
-            //{
-
-            //}
-
             MondayOfTheWeek();
         }
 
@@ -34,6 +25,13 @@ namespace Test.View.Schedule.Calendar
         DateTime date5;
         DateTime date6;
         DateTime date7;
+        string datestr1;
+        string datestr2;
+        string datestr3;
+        string datestr4;
+        string datestr5;
+        string datestr6;
+        string datestr7;
 
         public DateTime Date1 { get => date1; set { date1 = value; OnPropertyChanged("Date1"); } }
         public DateTime Date2 { get => date2; set { date2 = value; OnPropertyChanged("Date2"); } }
@@ -42,6 +40,13 @@ namespace Test.View.Schedule.Calendar
         public DateTime Date5 { get => date5; set { date5 = value; OnPropertyChanged("Date5"); } }
         public DateTime Date6 { get => date6; set { date6 = value; OnPropertyChanged("Date6"); } }
         public DateTime Date7 { get => date7; set { date7 = value; OnPropertyChanged("Date7"); } }
+        public string DateStr1 { get => datestr1; set { datestr1 = value; OnPropertyChanged("DateStr1"); } }
+        public string DateStr2 { get => datestr2; set { datestr2 = value; OnPropertyChanged("DateStr2"); } }
+        public string DateStr3 { get => datestr3; set { datestr3 = value; OnPropertyChanged("DateStr3"); } }
+        public string DateStr4 { get => datestr4; set { datestr4 = value; OnPropertyChanged("DateStr4"); } }
+        public string DateStr5 { get => datestr5; set { datestr5 = value; OnPropertyChanged("DateStr5"); } }
+        public string DateStr6 { get => datestr6; set { datestr6 = value; OnPropertyChanged("DateStr6"); } }
+        public string DateStr7 { get => datestr7; set { datestr7 = value; OnPropertyChanged("DateStr7"); } }
 
         public DateTime MondayOfTheWeek()
         {
@@ -57,19 +62,36 @@ namespace Test.View.Schedule.Calendar
             Date6 = monday.AddDays(5);
             Date7 = monday.AddDays(6);
 
+            DateStr1 = Date1.ToString("dd/MM");
+            DateStr2 = Date2.ToString("dd/MM");
+            DateStr3 = Date3.ToString("dd/MM");
+            DateStr4 = Date4.ToString("dd/MM");
+            DateStr5 = Date5.ToString("dd/MM");
+            DateStr6 = Date6.ToString("dd/MM");
+            DateStr7 = Date7.ToString("dd/MM");
+
+
             return monday;
         }
 
 
         public void AddWeek()
         {
-             Date1 = date1.AddDays(7);
-             Date2 = date2.AddDays(7);
-             Date3 = date3.AddDays(7);
-             Date4 = date4.AddDays(7);
-             Date5 = date5.AddDays(7);
-             Date6 = date6.AddDays(7);
-             Date7 = date7.AddDays(7);
+            Date1 = date1.AddDays(7);
+            Date2 = date2.AddDays(7);
+            Date3 = date3.AddDays(7);
+            Date4 = date4.AddDays(7);
+            Date5 = date5.AddDays(7);
+            Date6 = date6.AddDays(7);
+            Date7 = date7.AddDays(7);
+
+            DateStr1 = Date1.ToString("dd/MM");
+            DateStr2 = Date2.ToString("dd/MM");
+            DateStr3 = Date3.ToString("dd/MM");
+            DateStr4 = Date4.ToString("dd/MM");
+            DateStr5 = Date5.ToString("dd/MM");
+            DateStr6 = Date6.ToString("dd/MM");
+            DateStr7 = Date7.ToString("dd/MM");
         }
 
         public void RemoveWeek()
@@ -81,6 +103,14 @@ namespace Test.View.Schedule.Calendar
             Date5 = date5.AddDays(-7);
             Date6 = date6.AddDays(-7);
             Date7 = date7.AddDays(-7);
+
+            DateStr1 = Date1.ToString("dd/MM");
+            DateStr2 = Date2.ToString("dd/MM");
+            DateStr3 = Date3.ToString("dd/MM");
+            DateStr4 = Date4.ToString("dd/MM");
+            DateStr5 = Date5.ToString("dd/MM");
+            DateStr6 = Date6.ToString("dd/MM");
+            DateStr7 = Date7.ToString("dd/MM");
         }
 
 
@@ -116,12 +146,6 @@ namespace Test.View.Schedule.Calendar
 
         }
 
-
-
-
-
-
-
-
+        
     }
 }
