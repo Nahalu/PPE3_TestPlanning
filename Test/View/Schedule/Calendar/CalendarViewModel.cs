@@ -26,10 +26,9 @@ namespace Test.View.Schedule.Calendar
             {
                 listInterventions = api.GetInterventions();
             }
-
+            
         }
 
-        
 
 
         public void Today()

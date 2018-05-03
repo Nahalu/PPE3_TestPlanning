@@ -30,13 +30,20 @@ namespace Test.View.Schedule.Calendar
 
             IList<interventions> list = ViewModel.ListInterventions.ToList();
 
-            if (list != null)
+            foreach(interventions inter in list)
             {
-                Button();
+  
+                if (inter.date.Day == ViewModel.Date4.Day)
+                {
+                    Button x = new Button();
+                    x.Height = 100;
+                    x.Width = 3000;
+                    x.Background = new SolidColorBrush(Colors.Purple);
+                    x.Content = "BONJOUR";
+                    St4.Children.Add(x);
+                }
 
             }
-
-
 
 
         }
