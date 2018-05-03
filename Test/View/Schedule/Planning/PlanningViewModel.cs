@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
-using Test.ServiceReference;
+
 
 namespace Test.View.Schedule.Planning
 {
@@ -12,23 +12,23 @@ namespace Test.View.Schedule.Planning
     {
         private string name;
         public string Name { get => name; set => name = value; }
-        public string Toto { get => toto; set => toto = value; }
-        public IList<interventions> ListeIntervention { get => listeIntervention; set => listeIntervention = value; }
+        //public string Toto { get => toto; set => toto = value; }
+        //public IList<interventions> ListeIntervention { get => listeIntervention; set => listeIntervention = value; }
 
-        string toto;
+        //string toto;
 
-        IList<ServiceReference.interventions> listeIntervention;
+        //IList<ServiceReference.interventions> listeIntervention;
       public PlanningViewModel()
       {
-            toto = "test";
-            ListeIntervention = new List<ServiceReference.interventions>();
+            //toto = "test";
+            //ListeIntervention = new List<ServiceReference.interventions>();
 
-            using (ServiceReference.Service1Client api = new ServiceReference.Service1Client())
-            {
-                DateTime start = DateTime.Now.AddYears(-2);
-                DateTime end = DateTime.Now.AddYears(2);
-                //listeIntervention=api.GetPlanning(start, end);
-            }
+            //using (ServiceReference.Service1Client api = new ServiceReference.Service1Client())
+            //{
+            //    DateTime start = DateTime.Now.AddYears(-2);
+            //    DateTime end = DateTime.Now.AddYears(2);
+            //   // listeIntervention=api.GetPlanning(start, end);
+            //}
 
 
   

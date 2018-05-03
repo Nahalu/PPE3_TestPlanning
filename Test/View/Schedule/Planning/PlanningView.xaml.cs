@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Test.ServiceReference;
+
 
 namespace Test.View.Schedule.Planning
 {
@@ -22,15 +22,15 @@ namespace Test.View.Schedule.Planning
     public partial class PlanningView : UserControl
     {
 
-        PlanningViewModel _ViewModel = new PlanningViewModel();
+        //PlanningViewModel _ViewModel = new PlanningViewModel();
         public PlanningView()
         {
             InitializeComponent();
-            base.DataContext = _ViewModel;
+            //base.DataContext = _ViewModel;
 
-            string test = _ViewModel.Toto;
+            //string test = _ViewModel.Toto;
 
-            IList<interventions> list = _ViewModel.ListeIntervention.ToList();
+            //IList<interventions> list = _ViewModel.ListeIntervention.ToList();
 
 
 
@@ -74,7 +74,7 @@ namespace Test.View.Schedule.Planning
             Grid.SetColumn(testButton, 0);
 
             Canc.Children.Add(testButton);
-
+            
             Canc.ColumnDefinitions.Add(c1);
             Canc.ColumnDefinitions.Add(c2);
             Canc.ColumnDefinitions.Add(c3);

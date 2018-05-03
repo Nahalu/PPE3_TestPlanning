@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Test.View.Schedule.Calendar"
+             xmlns:Button="clr-namespace:Test.View.Schedule.Calendar"
              mc:Ignorable="d" Height="580.51" Width="1058.933">
     <Grid Margin="0,0,0.2,-0.2">
         <Grid Margin="63,0,365,0">
@@ -21,21 +22,21 @@
                 <RowDefinition  />
             </Grid.RowDefinitions>
 
-            <TextBlock Grid.Column="0" Text="{Binding DateStr1}" Background="#FF999581"></TextBlock>
-            <TextBlock Grid.Column="1" Text="{Binding DateStr2}" Background="#FF999581"></TextBlock>
-            <TextBlock Grid.Column="2" Text="{Binding DateStr3}" Background="#FF999581"></TextBlock>
-            <TextBlock Grid.Column="3" Text="{Binding DateStr4}" Background="#FF999581"></TextBlock>
-            <TextBlock Grid.Column="4" Text="{Binding DateStr5}" Background="#FF999581"></TextBlock>
-            <TextBlock Grid.Column="5" Text="{Binding DateStr6}" Background="#FF999581"></TextBlock>
-            <TextBlock Grid.Column="6" Text="{Binding DateStr7}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="0" FontSize="15" TextAlignment="Center" Text="{Binding DateStr1}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="1" FontSize="15" TextAlignment="Center" Text="{Binding DateStr2}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="2" FontSize="15" TextAlignment="Center" Text="{Binding DateStr3}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="3" FontSize="15" TextAlignment="Center" Text="{Binding DateStr4}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="4" FontSize="15" TextAlignment="Center" Text="{Binding DateStr5}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="5" FontSize="15" TextAlignment="Center" Text="{Binding DateStr6}" Background="#FF999581"></TextBlock>
+            <TextBlock Grid.Column="6" FontSize="15" TextAlignment="Center" Text="{Binding DateStr7}" Background="#FF999581"></TextBlock>
 
-            <StackPanel Name="St1" Grid.Column="0" Grid.Row="1"></StackPanel>
-            <StackPanel Grid.Column="1" Grid.Row="1"></StackPanel>
-            <StackPanel Grid.Column="2" Grid.Row="1"></StackPanel>
-            <StackPanel Grid.Column="3" Grid.Row="1"></StackPanel>
-            <StackPanel Grid.Column="4" Grid.Row="1"></StackPanel>
-            <StackPanel Grid.Column="5" Grid.Row="1"></StackPanel>
-            <StackPanel Grid.Column="6" Grid.Row="1"></StackPanel>
+            <StackPanel Name="St1" Grid.Column="0" Grid.Row="1" Background="#FFCECECE"></StackPanel>
+            <StackPanel Grid.Column="1" Grid.Row="1" Background="#FFCECECE"></StackPanel>
+            <StackPanel Grid.Column="2" Grid.Row="1" Background="#FFCECECE"></StackPanel>
+            <StackPanel Grid.Column="3" Grid.Row="1" Background="#FFCECECE"></StackPanel>
+            <StackPanel Grid.Column="4" Grid.Row="1" Background="#FFCECECE"></StackPanel>
+            <StackPanel Grid.Column="5" Grid.Row="1" Background="#FFCECECE"></StackPanel>
+            <StackPanel Grid.Column="6" Grid.Row="1" Background="#FFCECECE"></StackPanel>
 
         </Grid>
         <DataGrid Margin="756,0,0,0">

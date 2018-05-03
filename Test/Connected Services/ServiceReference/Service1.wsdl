@@ -14,12 +14,6 @@
   <wsdl:message name="IService1_GetAddressCustomers_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetAddressCustomersResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetContactsCustomers_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetContactsCustomers" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetContactsCustomers_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetContactsCustomersResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_GetCustomers_InputMessage">
     <wsdl:part name="parameters" element="tns:GetCustomers" />
   </wsdl:message>
@@ -61,12 +55,6 @@
   </wsdl:message>
   <wsdl:message name="IService1_GetRoles_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetRolesResponse" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetNomEmployees_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetNomEmployees" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetNomEmployees_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetNomEmployeesResponse" />
   </wsdl:message>
   <wsdl:message name="IService1_GetDevicesNoAffiliation_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDevicesNoAffiliation" />
@@ -158,12 +146,6 @@
   <wsdl:message name="IService1_ModifyAddressCustomer_OutputMessage">
     <wsdl:part name="parameters" element="tns:ModifyAddressCustomerResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_ModifyContactCustomer_InputMessage">
-    <wsdl:part name="parameters" element="tns:ModifyContactCustomer" />
-  </wsdl:message>
-  <wsdl:message name="IService1_ModifyContactCustomer_OutputMessage">
-    <wsdl:part name="parameters" element="tns:ModifyContactCustomerResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_ModifyIntervention_InputMessage">
     <wsdl:part name="parameters" element="tns:ModifyIntervention" />
   </wsdl:message>
@@ -212,12 +194,6 @@
   <wsdl:message name="IService1_DeleteAddressCustomer_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteAddressCustomerResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_DeleteContactCustomer_InputMessage">
-    <wsdl:part name="parameters" element="tns:DeleteContactCustomer" />
-  </wsdl:message>
-  <wsdl:message name="IService1_DeleteContactCustomer_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DeleteContactCustomerResponse" />
-  </wsdl:message>
   <wsdl:message name="IService1_DeleteMotive_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteMotive" />
   </wsdl:message>
@@ -230,20 +206,10 @@
   <wsdl:message name="IService1_DeleteRole_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteRoleResponse" />
   </wsdl:message>
-  <wsdl:message name="IService1_GetPlanning_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetPlanning" />
-  </wsdl:message>
-  <wsdl:message name="IService1_GetPlanning_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetPlanningResponse" />
-  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="GetAddressCustomers">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetAddressCustomers" message="tns:IService1_GetAddressCustomers_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetAddressCustomersResponse" message="tns:IService1_GetAddressCustomers_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetContactsCustomers">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetContactsCustomers" message="tns:IService1_GetContactsCustomers_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetContactsCustomersResponse" message="tns:IService1_GetContactsCustomers_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetCustomers">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetCustomers" message="tns:IService1_GetCustomers_InputMessage" />
@@ -272,10 +238,6 @@
     <wsdl:operation name="GetRoles">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetRoles" message="tns:IService1_GetRoles_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetRolesResponse" message="tns:IService1_GetRoles_OutputMessage" />
-    </wsdl:operation>
-    <wsdl:operation name="GetNomEmployees">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetNomEmployees" message="tns:IService1_GetNomEmployees_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetNomEmployeesResponse" message="tns:IService1_GetNomEmployees_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="GetDevicesNoAffiliation">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDevicesNoAffiliation" message="tns:IService1_GetDevicesNoAffiliation_InputMessage" />
@@ -337,10 +299,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModifyAddressCustomer" message="tns:IService1_ModifyAddressCustomer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModifyAddressCustomerResponse" message="tns:IService1_ModifyAddressCustomer_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="ModifyContactCustomer">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModifyContactCustomer" message="tns:IService1_ModifyContactCustomer_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModifyContactCustomerResponse" message="tns:IService1_ModifyContactCustomer_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="ModifyIntervention">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/ModifyIntervention" message="tns:IService1_ModifyIntervention_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/ModifyInterventionResponse" message="tns:IService1_ModifyIntervention_OutputMessage" />
@@ -373,10 +331,6 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteAddressCustomer" message="tns:IService1_DeleteAddressCustomer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteAddressCustomerResponse" message="tns:IService1_DeleteAddressCustomer_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="DeleteContactCustomer">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteContactCustomer" message="tns:IService1_DeleteContactCustomer_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteContactCustomerResponse" message="tns:IService1_DeleteContactCustomer_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="DeleteMotive">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteMotive" message="tns:IService1_DeleteMotive_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteMotiveResponse" message="tns:IService1_DeleteMotive_OutputMessage" />
@@ -385,24 +339,11 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteRole" message="tns:IService1_DeleteRole_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteRoleResponse" message="tns:IService1_DeleteRole_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetPlanning">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetPlanning" message="tns:IService1_GetPlanning_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetPlanningResponse" message="tns:IService1_GetPlanning_OutputMessage" />
-    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetAddressCustomers">
       <soap:operation soapAction="http://tempuri.org/IService1/GetAddressCustomers" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetContactsCustomers">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetContactsCustomers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -466,15 +407,6 @@
     </wsdl:operation>
     <wsdl:operation name="GetRoles">
       <soap:operation soapAction="http://tempuri.org/IService1/GetRoles" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetNomEmployees">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetNomEmployees" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -617,15 +549,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ModifyContactCustomer">
-      <soap:operation soapAction="http://tempuri.org/IService1/ModifyContactCustomer" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="ModifyIntervention">
       <soap:operation soapAction="http://tempuri.org/IService1/ModifyIntervention" style="document" />
       <wsdl:input>
@@ -698,15 +621,6 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="DeleteContactCustomer">
-      <soap:operation soapAction="http://tempuri.org/IService1/DeleteContactCustomer" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
     <wsdl:operation name="DeleteMotive">
       <soap:operation soapAction="http://tempuri.org/IService1/DeleteMotive" style="document" />
       <wsdl:input>
@@ -718,15 +632,6 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteRole">
       <soap:operation soapAction="http://tempuri.org/IService1/DeleteRole" style="document" />
-      <wsdl:input>
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetPlanning">
-      <soap:operation soapAction="http://tempuri.org/IService1/GetPlanning" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

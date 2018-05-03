@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Test.ServiceReference;
 
 namespace Test.View.Schedule.Calendar
 {
@@ -20,9 +21,35 @@ namespace Test.View.Schedule.Calendar
     /// </summary>
     public partial class CalendarView : UserControl
     {
+        CalendarViewModel ViewModel = new CalendarViewModel();
         public CalendarView()
         {
             InitializeComponent();
+            this.DataContext = ViewModel;
+
+
+            IList<interventions> list = ViewModel.ListInterventions.ToList();
+
+            if (list != null)
+            {
+                Button();
+
+            }
+
+
+
+
+        }
+        public Button Button()
+        {
+            InitializeComponent();
+            Button x = new Button();
+            x.Height = 100;
+            x.Width = 3000;
+            x.Background = new SolidColorBrush(Colors.Purple);
+            x.Content = "BONJOUR";
+            St1.Children.Add(x);
+            return x;
         }
     }
 }

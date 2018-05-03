@@ -29,9 +29,6 @@ namespace Test.ServiceReference {
         private string business_nameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Test.ServiceReference.contacts_customers[] contacts_customersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime created_atField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -93,19 +90,6 @@ namespace Test.ServiceReference {
                 if ((object.ReferenceEquals(this.business_nameField, value) != true)) {
                     this.business_nameField = value;
                     this.RaisePropertyChanged("business_name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Test.ServiceReference.contacts_customers[] contacts_customers {
-            get {
-                return this.contacts_customersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.contacts_customersField, value) != true)) {
-                    this.contacts_customersField = value;
-                    this.RaisePropertyChanged("contacts_customers");
                 }
             }
         }
@@ -263,13 +247,7 @@ namespace Test.ServiceReference {
         private string cityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.Nullable<int> contact_idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string countryField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime created_atField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int customer_idField;
@@ -281,16 +259,10 @@ namespace Test.ServiceReference {
         private int idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Test.ServiceReference.interventions[] interventionsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string street_nameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string street_numberField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime updated_atField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string zip_codeField;
@@ -319,19 +291,6 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.Nullable<int> contact_id {
-            get {
-                return this.contact_idField;
-            }
-            set {
-                if ((this.contact_idField.Equals(value) != true)) {
-                    this.contact_idField = value;
-                    this.RaisePropertyChanged("contact_id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string country {
             get {
                 return this.countryField;
@@ -340,19 +299,6 @@ namespace Test.ServiceReference {
                 if ((object.ReferenceEquals(this.countryField, value) != true)) {
                     this.countryField = value;
                     this.RaisePropertyChanged("country");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime created_at {
-            get {
-                return this.created_atField;
-            }
-            set {
-                if ((this.created_atField.Equals(value) != true)) {
-                    this.created_atField = value;
-                    this.RaisePropertyChanged("created_at");
                 }
             }
         }
@@ -392,19 +338,6 @@ namespace Test.ServiceReference {
                 if ((this.idField.Equals(value) != true)) {
                     this.idField = value;
                     this.RaisePropertyChanged("id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Test.ServiceReference.interventions[] interventions {
-            get {
-                return this.interventionsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.interventionsField, value) != true)) {
-                    this.interventionsField = value;
-                    this.RaisePropertyChanged("interventions");
                 }
             }
         }
@@ -436,19 +369,6 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime updated_at {
-            get {
-                return this.updated_atField;
-            }
-            set {
-                if ((this.updated_atField.Equals(value) != true)) {
-                    this.updated_atField = value;
-                    this.RaisePropertyChanged("updated_at");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string zip_code {
             get {
                 return this.zip_codeField;
@@ -473,195 +393,6 @@ namespace Test.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="contacts_customers", Namespace="http://schemas.datacontract.org/2004/07/WebService")]
-    [System.SerializableAttribute()]
-    public partial class contacts_customers : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime created_atField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int customer_idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Test.ServiceReference.customers customersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string emailField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string firstnameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string lastnameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string mobileField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string phoneField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime updated_atField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime created_at {
-            get {
-                return this.created_atField;
-            }
-            set {
-                if ((this.created_atField.Equals(value) != true)) {
-                    this.created_atField = value;
-                    this.RaisePropertyChanged("created_at");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int customer_id {
-            get {
-                return this.customer_idField;
-            }
-            set {
-                if ((this.customer_idField.Equals(value) != true)) {
-                    this.customer_idField = value;
-                    this.RaisePropertyChanged("customer_id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Test.ServiceReference.customers customers {
-            get {
-                return this.customersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.customersField, value) != true)) {
-                    this.customersField = value;
-                    this.RaisePropertyChanged("customers");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string email {
-            get {
-                return this.emailField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.emailField, value) != true)) {
-                    this.emailField = value;
-                    this.RaisePropertyChanged("email");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string firstname {
-            get {
-                return this.firstnameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.firstnameField, value) != true)) {
-                    this.firstnameField = value;
-                    this.RaisePropertyChanged("firstname");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int id {
-            get {
-                return this.idField;
-            }
-            set {
-                if ((this.idField.Equals(value) != true)) {
-                    this.idField = value;
-                    this.RaisePropertyChanged("id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string lastname {
-            get {
-                return this.lastnameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.lastnameField, value) != true)) {
-                    this.lastnameField = value;
-                    this.RaisePropertyChanged("lastname");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string mobile {
-            get {
-                return this.mobileField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.mobileField, value) != true)) {
-                    this.mobileField = value;
-                    this.RaisePropertyChanged("mobile");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string phone {
-            get {
-                return this.phoneField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.phoneField, value) != true)) {
-                    this.phoneField = value;
-                    this.RaisePropertyChanged("phone");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime updated_at {
-            get {
-                return this.updated_atField;
-            }
-            set {
-                if ((this.updated_atField.Equals(value) != true)) {
-                    this.updated_atField = value;
-                    this.RaisePropertyChanged("updated_at");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="interventions", Namespace="http://schemas.datacontract.org/2004/07/WebService")]
     [System.SerializableAttribute()]
     public partial class interventions : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -670,16 +401,10 @@ namespace Test.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int address_customer_idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Test.ServiceReference.address_customers address_customersField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime created_atField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int customer_idField;
+        private System.Nullable<int> customer_idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private Test.ServiceReference.customers customersField;
@@ -719,32 +444,6 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int address_customer_id {
-            get {
-                return this.address_customer_idField;
-            }
-            set {
-                if ((this.address_customer_idField.Equals(value) != true)) {
-                    this.address_customer_idField = value;
-                    this.RaisePropertyChanged("address_customer_id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Test.ServiceReference.address_customers address_customers {
-            get {
-                return this.address_customersField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.address_customersField, value) != true)) {
-                    this.address_customersField = value;
-                    this.RaisePropertyChanged("address_customers");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime created_at {
             get {
                 return this.created_atField;
@@ -758,7 +457,7 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int customer_id {
+        public System.Nullable<int> customer_id {
             get {
                 return this.customer_idField;
             }
@@ -907,6 +606,9 @@ namespace Test.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Test.ServiceReference.address_employees[] address_employeesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime arrival_dateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -914,12 +616,6 @@ namespace Test.ServiceReference {
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime birthdateField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string cityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string countryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime created_atField;
@@ -949,9 +645,6 @@ namespace Test.ServiceReference {
         private string lastnameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Test.ServiceReference.localizations[] localizationsField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string marital_statusField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -964,6 +657,9 @@ namespace Test.ServiceReference {
         private byte[] pictureField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string pwdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int role_idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -973,16 +669,7 @@ namespace Test.ServiceReference {
         private string social_security_numberField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string street_nameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string street_numberField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime updated_atField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string zip_codeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -991,6 +678,19 @@ namespace Test.ServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Test.ServiceReference.address_employees[] address_employees {
+            get {
+                return this.address_employeesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.address_employeesField, value) != true)) {
+                    this.address_employeesField = value;
+                    this.RaisePropertyChanged("address_employees");
+                }
             }
         }
         
@@ -1029,32 +729,6 @@ namespace Test.ServiceReference {
                 if ((this.birthdateField.Equals(value) != true)) {
                     this.birthdateField = value;
                     this.RaisePropertyChanged("birthdate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string city {
-            get {
-                return this.cityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.cityField, value) != true)) {
-                    this.cityField = value;
-                    this.RaisePropertyChanged("city");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string country {
-            get {
-                return this.countryField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.countryField, value) != true)) {
-                    this.countryField = value;
-                    this.RaisePropertyChanged("country");
                 }
             }
         }
@@ -1177,19 +851,6 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Test.ServiceReference.localizations[] localizations {
-            get {
-                return this.localizationsField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.localizationsField, value) != true)) {
-                    this.localizationsField = value;
-                    this.RaisePropertyChanged("localizations");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public string marital_status {
             get {
                 return this.marital_statusField;
@@ -1242,6 +903,19 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string pwd {
+            get {
+                return this.pwdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.pwdField, value) != true)) {
+                    this.pwdField = value;
+                    this.RaisePropertyChanged("pwd");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int role_id {
             get {
                 return this.role_idField;
@@ -1281,32 +955,6 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string street_name {
-            get {
-                return this.street_nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.street_nameField, value) != true)) {
-                    this.street_nameField = value;
-                    this.RaisePropertyChanged("street_name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string street_number {
-            get {
-                return this.street_numberField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.street_numberField, value) != true)) {
-                    this.street_numberField = value;
-                    this.RaisePropertyChanged("street_number");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime updated_at {
             get {
                 return this.updated_atField;
@@ -1315,19 +963,6 @@ namespace Test.ServiceReference {
                 if ((this.updated_atField.Equals(value) != true)) {
                     this.updated_atField = value;
                     this.RaisePropertyChanged("updated_at");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string zip_code {
-            get {
-                return this.zip_codeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.zip_codeField, value) != true)) {
-                    this.zip_codeField = value;
-                    this.RaisePropertyChanged("zip_code");
                 }
             }
         }
@@ -1495,7 +1130,7 @@ namespace Test.ServiceReference {
         private string labelField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Test.ServiceReference.localizations[] localizationsField;
+        private Test.ServiceReference.localizations localizationsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string mac_addressField;
@@ -1601,7 +1236,7 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public Test.ServiceReference.localizations[] localizations {
+        public Test.ServiceReference.localizations localizations {
             get {
                 return this.localizationsField;
             }
@@ -1799,21 +1434,18 @@ namespace Test.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="localizations", Namespace="http://schemas.datacontract.org/2004/07/WebService")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="address_employees", Namespace="http://schemas.datacontract.org/2004/07/WebService")]
     [System.SerializableAttribute()]
-    public partial class localizations : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class address_employees : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime created_atField;
+        private string cityField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int device_idField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private Test.ServiceReference.devices devicesField;
+        private string countryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int employee_idField;
@@ -1825,10 +1457,13 @@ namespace Test.ServiceReference {
         private int idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string positionField;
+        private string street_nameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private System.DateTime updated_atField;
+        private string street_numberField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string zip_codeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1841,40 +1476,27 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime created_at {
+        public string city {
             get {
-                return this.created_atField;
+                return this.cityField;
             }
             set {
-                if ((this.created_atField.Equals(value) != true)) {
-                    this.created_atField = value;
-                    this.RaisePropertyChanged("created_at");
+                if ((object.ReferenceEquals(this.cityField, value) != true)) {
+                    this.cityField = value;
+                    this.RaisePropertyChanged("city");
                 }
             }
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public int device_id {
+        public string country {
             get {
-                return this.device_idField;
+                return this.countryField;
             }
             set {
-                if ((this.device_idField.Equals(value) != true)) {
-                    this.device_idField = value;
-                    this.RaisePropertyChanged("device_id");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public Test.ServiceReference.devices devices {
-            get {
-                return this.devicesField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.devicesField, value) != true)) {
-                    this.devicesField = value;
-                    this.RaisePropertyChanged("devices");
+                if ((object.ReferenceEquals(this.countryField, value) != true)) {
+                    this.countryField = value;
+                    this.RaisePropertyChanged("country");
                 }
             }
         }
@@ -1919,6 +1541,141 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string street_name {
+            get {
+                return this.street_nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.street_nameField, value) != true)) {
+                    this.street_nameField = value;
+                    this.RaisePropertyChanged("street_name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string street_number {
+            get {
+                return this.street_numberField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.street_numberField, value) != true)) {
+                    this.street_numberField = value;
+                    this.RaisePropertyChanged("street_number");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string zip_code {
+            get {
+                return this.zip_codeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.zip_codeField, value) != true)) {
+                    this.zip_codeField = value;
+                    this.RaisePropertyChanged("zip_code");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="localizations", Namespace="http://schemas.datacontract.org/2004/07/WebService")]
+    [System.SerializableAttribute()]
+    public partial class localizations : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int device_idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private Test.ServiceReference.devices devicesField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ingField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string latField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string positionField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int device_id {
+            get {
+                return this.device_idField;
+            }
+            set {
+                if ((this.device_idField.Equals(value) != true)) {
+                    this.device_idField = value;
+                    this.RaisePropertyChanged("device_id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public Test.ServiceReference.devices devices {
+            get {
+                return this.devicesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.devicesField, value) != true)) {
+                    this.devicesField = value;
+                    this.RaisePropertyChanged("devices");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ing {
+            get {
+                return this.ingField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ingField, value) != true)) {
+                    this.ingField = value;
+                    this.RaisePropertyChanged("ing");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string lat {
+            get {
+                return this.latField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.latField, value) != true)) {
+                    this.latField = value;
+                    this.RaisePropertyChanged("lat");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public string position {
             get {
                 return this.positionField;
@@ -1927,19 +1684,6 @@ namespace Test.ServiceReference {
                 if ((object.ReferenceEquals(this.positionField, value) != true)) {
                     this.positionField = value;
                     this.RaisePropertyChanged("position");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public System.DateTime updated_at {
-            get {
-                return this.updated_atField;
-            }
-            set {
-                if ((this.updated_atField.Equals(value) != true)) {
-                    this.updated_atField = value;
-                    this.RaisePropertyChanged("updated_at");
                 }
             }
         }
@@ -2034,12 +1778,6 @@ namespace Test.ServiceReference {
         private System.DateTime birthdateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string cityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string countryField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime created_atField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -2073,22 +1811,16 @@ namespace Test.ServiceReference {
         private byte[] pictureField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string pwdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int role_idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string social_security_numberField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string street_nameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string street_numberField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime updated_atField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string zip_codeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -2135,32 +1867,6 @@ namespace Test.ServiceReference {
                 if ((this.birthdateField.Equals(value) != true)) {
                     this.birthdateField = value;
                     this.RaisePropertyChanged("birthdate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string city {
-            get {
-                return this.cityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.cityField, value) != true)) {
-                    this.cityField = value;
-                    this.RaisePropertyChanged("city");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string country {
-            get {
-                return this.countryField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.countryField, value) != true)) {
-                    this.countryField = value;
-                    this.RaisePropertyChanged("country");
                 }
             }
         }
@@ -2309,6 +2015,19 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string pwd {
+            get {
+                return this.pwdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.pwdField, value) != true)) {
+                    this.pwdField = value;
+                    this.RaisePropertyChanged("pwd");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int role_id {
             get {
                 return this.role_idField;
@@ -2335,32 +2054,6 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string street_name {
-            get {
-                return this.street_nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.street_nameField, value) != true)) {
-                    this.street_nameField = value;
-                    this.RaisePropertyChanged("street_name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string street_number {
-            get {
-                return this.street_numberField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.street_numberField, value) != true)) {
-                    this.street_numberField = value;
-                    this.RaisePropertyChanged("street_number");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime updated_at {
             get {
                 return this.updated_atField;
@@ -2369,19 +2062,6 @@ namespace Test.ServiceReference {
                 if ((this.updated_atField.Equals(value) != true)) {
                     this.updated_atField = value;
                     this.RaisePropertyChanged("updated_at");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string zip_code {
-            get {
-                return this.zip_codeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.zip_codeField, value) != true)) {
-                    this.zip_codeField = value;
-                    this.RaisePropertyChanged("zip_code");
                 }
             }
         }
@@ -2415,12 +2095,6 @@ namespace Test.ServiceReference {
         private System.DateTime birthdateField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string cityField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string countryField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime created_atField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -2454,22 +2128,16 @@ namespace Test.ServiceReference {
         private byte[] pictureField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string pwdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int role_idField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string social_security_numberField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string street_nameField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string street_numberField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime updated_atField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string zip_codeField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -2516,32 +2184,6 @@ namespace Test.ServiceReference {
                 if ((this.birthdateField.Equals(value) != true)) {
                     this.birthdateField = value;
                     this.RaisePropertyChanged("birthdate");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string city {
-            get {
-                return this.cityField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.cityField, value) != true)) {
-                    this.cityField = value;
-                    this.RaisePropertyChanged("city");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string country {
-            get {
-                return this.countryField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.countryField, value) != true)) {
-                    this.countryField = value;
-                    this.RaisePropertyChanged("country");
                 }
             }
         }
@@ -2690,6 +2332,19 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
+        public string pwd {
+            get {
+                return this.pwdField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.pwdField, value) != true)) {
+                    this.pwdField = value;
+                    this.RaisePropertyChanged("pwd");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
         public int role_id {
             get {
                 return this.role_idField;
@@ -2716,32 +2371,6 @@ namespace Test.ServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string street_name {
-            get {
-                return this.street_nameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.street_nameField, value) != true)) {
-                    this.street_nameField = value;
-                    this.RaisePropertyChanged("street_name");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string street_number {
-            get {
-                return this.street_numberField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.street_numberField, value) != true)) {
-                    this.street_numberField = value;
-                    this.RaisePropertyChanged("street_number");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime updated_at {
             get {
                 return this.updated_atField;
@@ -2750,19 +2379,6 @@ namespace Test.ServiceReference {
                 if ((this.updated_atField.Equals(value) != true)) {
                     this.updated_atField = value;
                     this.RaisePropertyChanged("updated_at");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string zip_code {
-            get {
-                return this.zip_codeField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.zip_codeField, value) != true)) {
-                    this.zip_codeField = value;
-                    this.RaisePropertyChanged("zip_code");
                 }
             }
         }
@@ -2786,12 +2402,6 @@ namespace Test.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetAddressCustomers", ReplyAction="http://tempuri.org/IService1/GetAddressCustomersResponse")]
         System.Threading.Tasks.Task<string[]> GetAddressCustomersAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetContactsCustomers", ReplyAction="http://tempuri.org/IService1/GetContactsCustomersResponse")]
-        string[] GetContactsCustomers();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetContactsCustomers", ReplyAction="http://tempuri.org/IService1/GetContactsCustomersResponse")]
-        System.Threading.Tasks.Task<string[]> GetContactsCustomersAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetCustomers", ReplyAction="http://tempuri.org/IService1/GetCustomersResponse")]
         Test.ServiceReference.customers[] GetCustomers();
@@ -2834,12 +2444,6 @@ namespace Test.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetRoles", ReplyAction="http://tempuri.org/IService1/GetRolesResponse")]
         System.Threading.Tasks.Task<Test.ServiceReference.roles[]> GetRolesAsync();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNomEmployees", ReplyAction="http://tempuri.org/IService1/GetNomEmployeesResponse")]
-        string[] GetNomEmployees();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetNomEmployees", ReplyAction="http://tempuri.org/IService1/GetNomEmployeesResponse")]
-        System.Threading.Tasks.Task<string[]> GetNomEmployeesAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDevicesNoAffiliation", ReplyAction="http://tempuri.org/IService1/GetDevicesNoAffiliationResponse")]
         Test.ServiceReference.SPS_DEVICESNOAFFILIATION_Result[] GetDevicesNoAffiliation();
@@ -2931,12 +2535,6 @@ namespace Test.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ModifyAddressCustomer", ReplyAction="http://tempuri.org/IService1/ModifyAddressCustomerResponse")]
         System.Threading.Tasks.Task<int> ModifyAddressCustomerAsync(Test.ServiceReference.address_customers a_c);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ModifyContactCustomer", ReplyAction="http://tempuri.org/IService1/ModifyContactCustomerResponse")]
-        int ModifyContactCustomer(Test.ServiceReference.contacts_customers c_c);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ModifyContactCustomer", ReplyAction="http://tempuri.org/IService1/ModifyContactCustomerResponse")]
-        System.Threading.Tasks.Task<int> ModifyContactCustomerAsync(Test.ServiceReference.contacts_customers c_c);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/ModifyIntervention", ReplyAction="http://tempuri.org/IService1/ModifyInterventionResponse")]
         int ModifyIntervention(Test.ServiceReference.interventions i);
         
@@ -2985,12 +2583,6 @@ namespace Test.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteAddressCustomer", ReplyAction="http://tempuri.org/IService1/DeleteAddressCustomerResponse")]
         System.Threading.Tasks.Task<int> DeleteAddressCustomerAsync(Test.ServiceReference.address_customers a_c);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteContactCustomer", ReplyAction="http://tempuri.org/IService1/DeleteContactCustomerResponse")]
-        int DeleteContactCustomer(Test.ServiceReference.contacts_customers c_c);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteContactCustomer", ReplyAction="http://tempuri.org/IService1/DeleteContactCustomerResponse")]
-        System.Threading.Tasks.Task<int> DeleteContactCustomerAsync(Test.ServiceReference.contacts_customers c_c);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteMotive", ReplyAction="http://tempuri.org/IService1/DeleteMotiveResponse")]
         int DeleteMotive(Test.ServiceReference.motives m);
         
@@ -3002,12 +2594,6 @@ namespace Test.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/DeleteRole", ReplyAction="http://tempuri.org/IService1/DeleteRoleResponse")]
         System.Threading.Tasks.Task<int> DeleteRoleAsync(Test.ServiceReference.roles r);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPlanning", ReplyAction="http://tempuri.org/IService1/GetPlanningResponse")]
-        Test.ServiceReference.interventions[] GetPlanning(System.DateTime start, System.DateTime end);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetPlanning", ReplyAction="http://tempuri.org/IService1/GetPlanningResponse")]
-        System.Threading.Tasks.Task<Test.ServiceReference.interventions[]> GetPlanningAsync(System.DateTime start, System.DateTime end);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -3043,14 +2629,6 @@ namespace Test.ServiceReference {
         
         public System.Threading.Tasks.Task<string[]> GetAddressCustomersAsync() {
             return base.Channel.GetAddressCustomersAsync();
-        }
-        
-        public string[] GetContactsCustomers() {
-            return base.Channel.GetContactsCustomers();
-        }
-        
-        public System.Threading.Tasks.Task<string[]> GetContactsCustomersAsync() {
-            return base.Channel.GetContactsCustomersAsync();
         }
         
         public Test.ServiceReference.customers[] GetCustomers() {
@@ -3107,14 +2685,6 @@ namespace Test.ServiceReference {
         
         public System.Threading.Tasks.Task<Test.ServiceReference.roles[]> GetRolesAsync() {
             return base.Channel.GetRolesAsync();
-        }
-        
-        public string[] GetNomEmployees() {
-            return base.Channel.GetNomEmployees();
-        }
-        
-        public System.Threading.Tasks.Task<string[]> GetNomEmployeesAsync() {
-            return base.Channel.GetNomEmployeesAsync();
         }
         
         public Test.ServiceReference.SPS_DEVICESNOAFFILIATION_Result[] GetDevicesNoAffiliation() {
@@ -3237,14 +2807,6 @@ namespace Test.ServiceReference {
             return base.Channel.ModifyAddressCustomerAsync(a_c);
         }
         
-        public int ModifyContactCustomer(Test.ServiceReference.contacts_customers c_c) {
-            return base.Channel.ModifyContactCustomer(c_c);
-        }
-        
-        public System.Threading.Tasks.Task<int> ModifyContactCustomerAsync(Test.ServiceReference.contacts_customers c_c) {
-            return base.Channel.ModifyContactCustomerAsync(c_c);
-        }
-        
         public int ModifyIntervention(Test.ServiceReference.interventions i) {
             return base.Channel.ModifyIntervention(i);
         }
@@ -3309,14 +2871,6 @@ namespace Test.ServiceReference {
             return base.Channel.DeleteAddressCustomerAsync(a_c);
         }
         
-        public int DeleteContactCustomer(Test.ServiceReference.contacts_customers c_c) {
-            return base.Channel.DeleteContactCustomer(c_c);
-        }
-        
-        public System.Threading.Tasks.Task<int> DeleteContactCustomerAsync(Test.ServiceReference.contacts_customers c_c) {
-            return base.Channel.DeleteContactCustomerAsync(c_c);
-        }
-        
         public int DeleteMotive(Test.ServiceReference.motives m) {
             return base.Channel.DeleteMotive(m);
         }
@@ -3331,14 +2885,6 @@ namespace Test.ServiceReference {
         
         public System.Threading.Tasks.Task<int> DeleteRoleAsync(Test.ServiceReference.roles r) {
             return base.Channel.DeleteRoleAsync(r);
-        }
-        
-        public Test.ServiceReference.interventions[] GetPlanning(System.DateTime start, System.DateTime end) {
-            return base.Channel.GetPlanning(start, end);
-        }
-        
-        public System.Threading.Tasks.Task<Test.ServiceReference.interventions[]> GetPlanningAsync(System.DateTime start, System.DateTime end) {
-            return base.Channel.GetPlanningAsync(start, end);
         }
     }
 }

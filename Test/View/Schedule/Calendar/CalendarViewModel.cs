@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Windows.Media;
+using Test.ServiceReference;
 
 namespace Test.View.Schedule.Calendar
 {
@@ -13,12 +15,22 @@ namespace Test.View.Schedule.Calendar
     {
         private string name;
         public string Name { get => name; set => name = value; }
+        public IList<interventions> ListInterventions { get => listInterventions; set => listInterventions = value; }
 
-        
+        private IList<interventions> listInterventions;
         public CalendarViewModel()
         {
             MondayOfTheWeek();
+            ListInterventions = new List<ServiceReference.interventions>();
+            using (ServiceReference.Service1Client api = new ServiceReference.Service1Client())
+            {
+                listInterventions = api.GetInterventions();
+            }
+
         }
+
+        
+
 
         public void Today()
         {
@@ -171,28 +183,6 @@ namespace Test.View.Schedule.Calendar
             }
         }
 
-        //public void AddTechnicianButton()
-        //{
-        //    StackPanel stack = new StackPanel();
-        //    ContentControl = stack;
-        //    for (int i = 0; i < 10; i++)
-        //    {
-        //        Button btn = new Button();
-        //        btn.Name = i.ToString();
-        //        btn.FontSize += 10;
-        //        btn.Content = "Button " + btn.Name + " says 'Click me'";
-        //        btn.Click += ButtonOnClick;
-        //        stack.Children.Add(btn);
-        //    }
-
-        //}
-        //void ButtonOnClick(object sender, RoutedEventArgs args)
-        //{
-        //    Button btn = args.Source as Button;
-
-        //    MessageBox.Show("Button " + btn.Name + " has been clicked",
-        //                    "Button Click");
-        //}
-
+        
     }
 }
