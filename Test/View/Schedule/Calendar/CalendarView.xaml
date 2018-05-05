@@ -39,7 +39,7 @@
             <StackPanel Name="St7" Grid.Column="6" Grid.Row="1" Background="#FFCECECE"></StackPanel>
 
         </Grid>
-        <DataGrid ItemsSource="{Binding ListeInterventions}" Margin="756,0,0,0">
+        <DataGrid ItemsSource="{Binding ListInterventionss}" Margin="756,0,0,0">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding id}"/>
                 <DataGridTextColumn Header="Date" Binding="{Binding date}"/>

@@ -20,7 +20,7 @@ namespace Test.View.Schedule.Calendar
             get => listInterventions; set { listInterventions = value; OnPropertyChanged("ListInterventions"); }
         }
         public IList<employees> ListEmployees { get => listEmployees; set => listEmployees = value; }
-        public List<Button> ListButton { get => listButton; set => listButton = value; }
+        public List<Button> ListButton { get => listButton; set { listButton = value; OnPropertyChanged("ListButton"); } }
 
 
         private IList<interventions> listInterventions;
@@ -28,6 +28,14 @@ namespace Test.View.Schedule.Calendar
         public CalendarViewModel()
         {
             MondayOfTheWeek();
+
+
+
+
+        }
+
+        public void Button()
+        {
             ListInterventions = new List<ServiceReference.interventions>();
             using (ServiceReference.Service1Client api = new ServiceReference.Service1Client())
             {
@@ -38,8 +46,6 @@ namespace Test.View.Schedule.Calendar
             {
                 listEmployees = api.GetEmployees();
             }
-
-
             foreach (interventions inter in listInterventions)
             {
                 if (inter.date.Day == Date4.Day)
@@ -50,34 +56,38 @@ namespace Test.View.Schedule.Calendar
                         {
                             Button x = new Button();
                             x.Height = 100;
-                            x.Width = 100;
-                            x.Background = new SolidColorBrush(Colors.AntiqueWhite);
+                            x.Width = 90;
+                            x.Background = new SolidColorBrush(Colors.BlueViolet);
                             x.Content = empl.lastname;
+                            x.Command = ShowInterventions;
                             listButton.Add(x);
                         }
                     }
                 }
             }
 
-
-
         }
 
+        private IList<interventions> _ListInterventions = null;
 
+        public IList<interventions> ListInterventionss
+        {
 
+            get
+            {
+                if (_ListInterventions == null)
+                {
+                    _ListInterventions = new List<interventions>();
+                }
+                return _ListInterventions;
+            }
+        }
 
 
 
 
         private List<Button> listButton = new List<Button>();
-        public Button Button()
-        {
-            Button x = new Button();
-            x.Height = 100;
-            x.Width = 100;
-            x.Background = new SolidColorBrush(Colors.AntiqueWhite);
-            return x;
-        }
+
 
         private IList<interventions> SearchInterventionBase()
         {
@@ -88,6 +98,7 @@ namespace Test.View.Schedule.Calendar
                     ListInterventions = api.GetInterventions();
                 }
             }
+            _ListInterventions = ListInterventions;
             return ListInterventions;
         }
 
@@ -192,6 +203,7 @@ namespace Test.View.Schedule.Calendar
             DateStr7 = Date7.ToString("dd/MM");
 
             Today();
+            Button();
         }
 
         public void AddWeek()
@@ -213,6 +225,8 @@ namespace Test.View.Schedule.Calendar
             DateStr7 = Date7.ToString("dd/MM");
 
             Today();
+            ListButton.Clear();
+            Button();
         }
 
         public void RemoveWeek()
@@ -234,6 +248,8 @@ namespace Test.View.Schedule.Calendar
             DateStr7 = Date7.ToString("dd/MM");
 
             Today();
+            ListButton.Clear();
+            Button();
         }
 
         public ICommand _NextWeek;

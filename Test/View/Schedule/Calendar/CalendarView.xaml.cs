@@ -31,39 +31,8 @@ namespace Test.View.Schedule.Calendar
             foreach(Button a in ViewModel.ListButton) { 
             St4.Children.Add(a);
             }
-            //IList<interventions> listInterventions = ViewModel.ListInterventions.ToList();
-            //IList<employees> listEmployees = ViewModel.ListEmployees.ToList();
-
-            //foreach(interventions inter in listInterventions)
-            //{
-            //    if (inter.date.Day == ViewModel.Date4.Day)
-            //    {
-            //        foreach (employees empl in listEmployees)
-            //        {
-            //            if (inter.employee_id == empl.id) { 
-            //            Button x = new Button();
-            //            x.Height = 100;
-            //            x.Width = 100;
-            //            x.Background = new SolidColorBrush(Colors.AntiqueWhite);
-            //            x.Content = empl.lastname;
-            //            x.Name = "a";
-            //            }
-            //        }
-            //    }
-            //}
         }
 
 
-        //public Button Button()
-        //{
-        //    InitializeComponent();
-        //    Button x = new Button();
-        //    x.Height = 100;
-        //    x.Width = 3000;
-        //    x.Background = new SolidColorBrush(Colors.Purple);
-        //    x.Content = "BONJOUR";
-        //    St1.Children.Add(x);
-        //    return x;
-        //}
     }
 }
