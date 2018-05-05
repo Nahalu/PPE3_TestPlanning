@@ -15,9 +15,16 @@ namespace Test.View.Schedule.Calendar
     {
         private string name;
         public string Name { get => name; set => name = value; }
-        public IList<interventions> ListInterventions { get => listInterventions; set => listInterventions = value; }
+        public IList<interventions> ListInterventions
+        {
+            get => listInterventions; set { listInterventions = value; OnPropertyChanged("ListInterventions"); }
+        }
+        public IList<employees> ListEmployees { get => listEmployees; set => listEmployees = value; }
+        public List<Button> ListButton { get => listButton; set => listButton = value; }
+
 
         private IList<interventions> listInterventions;
+        private IList<employees> listEmployees;
         public CalendarViewModel()
         {
             MondayOfTheWeek();
@@ -26,9 +33,78 @@ namespace Test.View.Schedule.Calendar
             {
                 listInterventions = api.GetInterventions();
             }
-            
+            ListEmployees = new List<ServiceReference.employees>();
+            using (ServiceReference.Service1Client api = new ServiceReference.Service1Client())
+            {
+                listEmployees = api.GetEmployees();
+            }
+
+
+            foreach (interventions inter in listInterventions)
+            {
+                if (inter.date.Day == Date4.Day)
+                {
+                    foreach (employees empl in listEmployees)
+                    {
+                        if (inter.employee_id == empl.id)
+                        {
+                            Button x = new Button();
+                            x.Height = 100;
+                            x.Width = 100;
+                            x.Background = new SolidColorBrush(Colors.AntiqueWhite);
+                            x.Content = empl.lastname;
+                            listButton.Add(x);
+                        }
+                    }
+                }
+            }
+
+
+
         }
 
+
+
+
+
+
+
+        private List<Button> listButton = new List<Button>();
+        public Button Button()
+        {
+            Button x = new Button();
+            x.Height = 100;
+            x.Width = 100;
+            x.Background = new SolidColorBrush(Colors.AntiqueWhite);
+            return x;
+        }
+
+        private IList<interventions> SearchInterventionBase()
+        {
+            IList<interventions> ListInterventions = null;
+            using (ServiceReference.Service1Client api = new ServiceReference.Service1Client())
+            {
+                {
+                    ListInterventions = api.GetInterventions();
+                }
+            }
+            return ListInterventions;
+        }
+
+        public ICommand _ShowInterventions;
+        public ICommand ShowInterventions
+        {
+            get
+            {
+                if (_ShowInterventions == null)
+                {
+                    _ShowInterventions = new RelayCommand(
+                        p => SearchInterventionBase());
+                }
+
+                return _ShowInterventions;
+            }
+        }
 
 
         public void Today()
@@ -36,22 +112,28 @@ namespace Test.View.Schedule.Calendar
             if (Date1 == DateTime.Today)
             {
                 DateStr1 = "Today";
-            }else if(Date2 == DateTime.Today)
+            }
+            else if (Date2 == DateTime.Today)
             {
                 DateStr2 = "Today";
-            }else if(Date3 == DateTime.Today)
+            }
+            else if (Date3 == DateTime.Today)
             {
                 DateStr3 = "Today";
-            }else if(Date4 == DateTime.Today)
+            }
+            else if (Date4 == DateTime.Today)
             {
                 DateStr4 = "Today";
-            }else if(Date5 == DateTime.Today)
+            }
+            else if (Date5 == DateTime.Today)
             {
                 DateStr5 = "Today";
-            }else if(Date6 == DateTime.Today)
+            }
+            else if (Date6 == DateTime.Today)
             {
                 DateStr6 = "Today";
-            }else if(Date7 == DateTime.Today)
+            }
+            else if (Date7 == DateTime.Today)
             {
                 DateStr7 = "Today";
             }
@@ -182,6 +264,6 @@ namespace Test.View.Schedule.Calendar
             }
         }
 
-        
+
     }
 }
