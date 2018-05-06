@@ -20,8 +20,22 @@ namespace Test.View.Schedule.Calendar
             get => listInterventions; set { listInterventions = value; OnPropertyChanged("ListInterventions"); }
         }
         public IList<employees> ListEmployees { get => listEmployees; set => listEmployees = value; }
-        public List<Button> ListButton { get => listButton; set { listButton = value; OnPropertyChanged("ListButton"); } }
+        public List<Button> ListButton1 { get => listButton1; set { listButton1 = value; OnPropertyChanged("ListButton1"); } }
+        public List<Button> ListButton2 { get => listButton2; set => listButton2 = value; }
+        public List<Button> ListButton3 { get => listButton3; set => listButton3 = value; }
+        public List<Button> ListButton4 { get => listButton4; set => listButton4 = value; }
+        public List<Button> ListButton5 { get => listButton5; set => listButton5 = value; }
+        public List<Button> ListButton6 { get => listButton6; set => listButton6 = value; }
+        public List<Button> ListButton7 { get => listButton7; set => listButton7 = value; }
 
+
+        private List<Button> listButton1 = new List<Button>();
+        private List<Button> listButton2 = new List<Button>();
+        private List<Button> listButton3 = new List<Button>();
+        private List<Button> listButton4 = new List<Button>();
+        private List<Button> listButton5 = new List<Button>();
+        private List<Button> listButton6 = new List<Button>();
+        private List<Button> listButton7 = new List<Button>();
 
         private IList<interventions> listInterventions;
         private IList<employees> listEmployees;
@@ -48,7 +62,7 @@ namespace Test.View.Schedule.Calendar
             }
             foreach (interventions inter in listInterventions)
             {
-                if (inter.date.Day == Date4.Day)
+                if (inter.date.Day == Date1.Day)
                 {
                     foreach (employees empl in listEmployees)
                     {
@@ -60,7 +74,102 @@ namespace Test.View.Schedule.Calendar
                             x.Background = new SolidColorBrush(Colors.BlueViolet);
                             x.Content = empl.lastname;
                             x.Command = ShowInterventions;
-                            listButton.Add(x);
+                            listButton1.Add(x);
+                        }
+                    }
+                } else if (inter.date.Day == Date2.Day)
+                {
+                    foreach (employees empl in listEmployees)
+                    {
+                        if (inter.employee_id == empl.id)
+                        {
+                            Button x = new Button();
+                            x.Height = 100;
+                            x.Width = 90;
+                            x.Background = new SolidColorBrush(Colors.BlueViolet);
+                            x.Content = empl.lastname;
+                            x.Command = ShowInterventions;
+                            ListButton2.Add(x);
+                        }
+                    }
+                }
+                else if (inter.date.Day == Date3.Day)
+                {
+                    foreach (employees empl in listEmployees)
+                    {
+                        if (inter.employee_id == empl.id)
+                        {
+                            Button x = new Button();
+                            x.Height = 100;
+                            x.Width = 90;
+                            x.Background = new SolidColorBrush(Colors.BlueViolet);
+                            x.Content = empl.lastname;
+                            x.Command = ShowInterventions;
+                            ListButton3.Add(x);
+                        }
+                    }
+                }
+                else if (inter.date.Day == Date4.Day)
+                {
+                    foreach (employees empl in listEmployees)
+                    {
+                        if (inter.employee_id == empl.id)
+                        {
+                            Button x = new Button();
+                            x.Height = 100;
+                            x.Width = 90;
+                            x.Background = new SolidColorBrush(Colors.BlueViolet);
+                            x.Content = empl.lastname;
+                            x.Command = ShowInterventions;
+                            ListButton4.Add(x);
+                        }
+                    }
+                }
+                else if (inter.date.Day == Date5.Day)
+                {
+                    foreach (employees empl in listEmployees)
+                    {
+                        if (inter.employee_id == empl.id)
+                        {
+                            Button x = new Button();
+                            x.Height = 100;
+                            x.Width = 90;
+                            x.Background = new SolidColorBrush(Colors.BlueViolet);
+                            x.Content = empl.lastname;
+                            x.Command = ShowInterventions;
+                            ListButton5.Add(x);
+                        }
+                    }
+                }
+                else if (inter.date.Day == Date6.Day)
+                {
+                    foreach (employees empl in listEmployees)
+                    {
+                        if (inter.employee_id == empl.id)
+                        {
+                            Button x = new Button();
+                            x.Height = 100;
+                            x.Width = 90;
+                            x.Background = new SolidColorBrush(Colors.BlueViolet);
+                            x.Content = empl.lastname;
+                            x.Command = ShowInterventions;
+                            ListButton6.Add(x);
+                        }
+                    }
+                }
+                else if (inter.date.Day == Date7.Day)
+                {
+                    foreach (employees empl in listEmployees)
+                    {
+                        if (inter.employee_id == empl.id)
+                        {
+                            Button x = new Button();
+                            x.Height = 100;
+                            x.Width = 90;
+                            x.Background = new SolidColorBrush(Colors.BlueViolet);
+                            x.Content = empl.lastname;
+                            x.Command = ShowInterventions;
+                            ListButton7.Add(x);
                         }
                     }
                 }
@@ -86,7 +195,7 @@ namespace Test.View.Schedule.Calendar
 
 
 
-        private List<Button> listButton = new List<Button>();
+        
 
 
         private IList<interventions> SearchInterventionBase()
@@ -225,7 +334,7 @@ namespace Test.View.Schedule.Calendar
             DateStr7 = Date7.ToString("dd/MM");
 
             Today();
-            ListButton.Clear();
+            ListButton1.Clear();
             Button();
         }
 
@@ -248,7 +357,7 @@ namespace Test.View.Schedule.Calendar
             DateStr7 = Date7.ToString("dd/MM");
 
             Today();
-            ListButton.Clear();
+            ListButton1.Clear();
             Button();
         }
 

@@ -27,10 +27,53 @@ namespace Test.View.Schedule.Calendar
             InitializeComponent();
             this.DataContext = ViewModel;
 
-            IList<Button> x = ViewModel.ListButton.ToList();
-            foreach(Button a in ViewModel.ListButton) { 
-            St4.Children.Add(a);
+            St4.Children.Clear();
+
+            IList<Button> x1 = ViewModel.ListButton1.ToList();
+            IList<Button> x2 = ViewModel.ListButton2.ToList();
+            IList<Button> x3 = ViewModel.ListButton3.ToList();
+            IList<Button> x4 = ViewModel.ListButton4.ToList();
+            IList<Button> x5 = ViewModel.ListButton5.ToList();
+            IList<Button> x6 = ViewModel.ListButton6.ToList();
+            IList<Button> x7 = ViewModel.ListButton7.ToList();
+
+            foreach(Button a in ViewModel.ListButton1) {
+                        St1.Children.Add(a);
+                    }
+            foreach (Button a in ViewModel.ListButton2)
+            {
+                St2.Children.Add(a);
             }
+            foreach (Button a in ViewModel.ListButton3)
+            {
+                St3.Children.Add(a);
+            }
+            foreach (Button a in ViewModel.ListButton4)
+            {
+                St4.Children.Add(a);
+            }
+            foreach (Button a in ViewModel.ListButton5)
+            {
+                St5.Children.Add(a);
+            }
+            foreach (Button a in ViewModel.ListButton6)
+            {
+                St6.Children.Add(a);
+            }
+            foreach (Button a in ViewModel.ListButton7)
+            {
+                St7.Children.Add(a);
+            }
+
+
+
+
+
+
+
+
+
+
         }
 
 
