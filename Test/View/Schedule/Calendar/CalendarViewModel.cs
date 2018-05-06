@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel.Channels;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -45,7 +46,7 @@ namespace Test.View.Schedule.Calendar
 
 
 
-
+            
         }
 
         public void Button()
@@ -177,18 +178,18 @@ namespace Test.View.Schedule.Calendar
 
         }
 
-        private IList<interventions> _ListInterventions = null;
+        private IList<interventions> _ListInterventionss = null;
 
         public IList<interventions> ListInterventionss
         {
 
             get
             {
-                if (_ListInterventions == null)
+                if (_ListInterventionss == null)
                 {
-                    _ListInterventions = new List<interventions>();
+                    _ListInterventionss = new List<interventions>();
                 }
-                return _ListInterventions;
+                return _ListInterventionss;
             }
         }
 
@@ -198,17 +199,17 @@ namespace Test.View.Schedule.Calendar
         
 
 
-        private IList<interventions> SearchInterventionBase()
+        private void SearchInterventionBase()
         {
-            IList<interventions> ListInterventions = null;
+            IList<interventions> ListInter = null;
             using (ServiceReference.Service1Client api = new ServiceReference.Service1Client())
             {
                 {
-                    ListInterventions = api.GetInterventions();
+                    ListInter = api.GetInterventions();
                 }
             }
-            _ListInterventions = ListInterventions;
-            return ListInterventions;
+            _ListInterventionss = ListInter;
+            RaisePropertyChanged("ListInterventionss");
         }
 
         public ICommand _ShowInterventions;
