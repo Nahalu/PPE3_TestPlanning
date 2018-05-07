@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
 using Test.ServiceReference;
@@ -334,9 +335,26 @@ namespace Test.View.Schedule.Calendar
             DateStr6 = Date6.ToString("dd/MM");
             DateStr7 = Date7.ToString("dd/MM");
 
+            CalendarView View = new CalendarView();
+
+ 
             Today();
-            ListButton1.Clear();
+            listButton1.Clear();
+            ListButton2.Clear();
+            ListButton3.Clear();
+            ListButton4.Clear();
+            ListButton5.Clear();
+            ListButton6.Clear();
+            ListButton7.Clear();
             Button();
+            CollectionViewSource.GetDefaultView(ListButton1).Refresh();
+            CollectionViewSource.GetDefaultView(ListButton2).Refresh();
+            CollectionViewSource.GetDefaultView(ListButton3).Refresh();
+            CollectionViewSource.GetDefaultView(ListButton4).Refresh();
+            CollectionViewSource.GetDefaultView(ListButton5).Refresh();
+            CollectionViewSource.GetDefaultView(ListButton6).Refresh();
+            CollectionViewSource.GetDefaultView(ListButton7).Refresh();
+
         }
 
         public void RemoveWeek()
@@ -359,7 +377,20 @@ namespace Test.View.Schedule.Calendar
 
             Today();
             ListButton1.Clear();
+            ListButton2.Clear();
+            ListButton3.Clear();
+            ListButton4.Clear();
+            ListButton5.Clear();
+            ListButton6.Clear();
+            ListButton7.Clear();
             Button();
+            CollectionViewSource.GetDefaultView(ListButton1).Refresh();
+            CollectionViewSource.GetDefaultView(ListButton2).Refresh();
+            CollectionViewSource.GetDefaultView(ListButton3).Refresh();
+            CollectionViewSource.GetDefaultView(ListButton4).Refresh();
+            CollectionViewSource.GetDefaultView(ListButton5).Refresh();
+            CollectionViewSource.GetDefaultView(ListButton6).Refresh();
+            CollectionViewSource.GetDefaultView(ListButton7).Refresh();
         }
 
         public ICommand _NextWeek;
